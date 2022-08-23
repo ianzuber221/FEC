@@ -1,0 +1,15 @@
+node_modules
+
+.DS_Store
+
+.env
+
+yarn.lock
+
+package-lock.json
+
+.jest/*
+
+client/public/bundle.js
+
+coverage

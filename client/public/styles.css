@@ -1,0 +1,14 @@
+.main-widget-container {
+  padding-bottom: 2% !important;
+  border-bottom: .5px solid black !important;
+  margin-bottom: 2% !important;
+  width: 70% !important;
+}
+
+.main-widget-title {
+  font-size: 16px !important;
+  padding: 2% !important;
+  margin-left: 1% !important;
+  font-weight: 400 !important;
+  margin-bottom: 1% !important;
+}

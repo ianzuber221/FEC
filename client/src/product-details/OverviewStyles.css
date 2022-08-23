@@ -1,0 +1,284 @@
+.overview {
+  display: inline-block;
+  height: 800px;
+  width: 850px !important;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 2%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.imagegallery {
+  float: left;
+  width: 400px;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+}
+
+.imageGalleryModal {
+  z-index: 100;
+  height: 800px;
+  width: 850px;
+  position: absolute;
+  background-color: white;
+  border: solid white 2px;
+  overflow: scroll;
+  text-align: right;
+}
+
+.mainImageContainer {
+  width: 100%;
+  height: 70%;
+  overflow: scroll;
+}
+
+.imageGalleryPrev {
+  background-color: white;
+  color: black;
+  float: left;
+  margin: 8px 7px;
+  width: 20px;
+  height: 25px;
+  border-radius: 25px;
+  padding: 3px 9px 3px 0;
+}
+.imageGalleryPrev:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.imageGalleryNext {
+  background-color: white;
+  color: black;
+  float: right;
+  margin: 8px 7px;
+  width: 20px;
+  height: 25px;
+  border-radius: 25px;
+  padding: 3px 0 3px 9px;
+}
+.imageGalleryNext:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.currentImage {
+  margin: auto;
+  width: 100%;
+  overflow: scroll;
+}
+
+.thumbnailView {
+  z-index: 150;
+  width: 400px;
+  height: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: center;
+  position: absolute;
+}
+
+.carousel {
+  height: 45px;
+  width: 45px;
+  float: left;
+  margin: auto 0.5%;
+}
+.carousel:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.carousel img {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.closeImageGalleryModal {
+  margin-bottom: 1%;
+}
+.closeImageGalleryModal:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.right {
+  float: right;
+  width: 400px;
+  height: 100%;
+  margin: 10px;
+}
+
+.productDetails {
+  float: center;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.productDetails h2 {
+  font-weight: normal;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#overview {
+  width: 100%;
+}
+
+#rating {
+  font-size: 15px;
+  overflow: scroll;
+}
+
+.starRating {
+  float: left;
+  width: 42%;
+  margin-bottom: 5px;
+  padding-right: 5px;
+  margin-top: 1.8%;
+  text-align: right;
+  color: goldenrod;
+}
+
+.totalRatings {
+  float: right;
+  width: 53%;
+  margin-top: 1.5%;
+  padding-left: 5px;
+  text-align: left;
+  text-decoration: underline;
+}
+.totalRatings:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+#nonPrice {
+  color: red;
+  text-decoration: line-through;
+  float: left;
+  text-align: right;
+  font-size: 20px;
+  width: 48%;
+  height: 100%;
+}
+
+#price {
+  font-size: 20px;
+}
+
+#salesPrice {
+  float: right;
+  text-align: left;
+  font-size: 20px;
+  width: 48%;
+  height: 100%;
+}
+
+.saleOutlay {
+  height: 15%;
+}
+
+.share {
+  width: 35px;
+  height: 35px;
+  border-radius: 35px;
+  margin: auto 3%;
+}
+
+.share:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.styleSelector {
+  float: center;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  height: 45%;
+}
+
+.currentStyleSelector {
+  text-align: center;
+  font-weight: bold;
+}
+
+.styleOption {
+  display: inline-block;
+  font-style: italic;
+  width: 23%;
+  max-height: 100px;
+  height: 25%;
+  margin: 1%;
+}
+
+.styleOption:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+#styleOverlay {
+  margin-left: 20px;
+  margin-top: 10px;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  z-index: 2;
+}
+
+.styleOption img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.addToCart {
+  float: right;
+  text-align: center;
+  margin: 5px;
+  width: 100%;
+  height: 10%;
+}
+
+.outOfStock {
+  float: right;
+  text-align: center;
+  margin: 5px;
+  width: 500px;
+  height: 50px;
+}
+
+.sizeOptions {
+  margin: 5px;
+}
+.sizeOptions:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.amountOption {
+  margin: 5px;
+}
+.amountOptions:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.cartButton {
+  margin: 5px;
+}
+.cartButton:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
+
+.sizeAlert {
+  color: red;
+}
