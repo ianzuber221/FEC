@@ -18,9 +18,6 @@ const RelatedItems = forwardRef((props, ref) => {
   const [currentProductData, setCurrentProductData] = useState();
   const [currentProductStyles, setCurrentProductStyles] = useState();
   const [currentProductReviews, setCurrentProductReviews] = useState();
-  // Context
-  //  TODO: Change default state
-  //  Will need to be able to show more than the default and update accordingly
   const getStylesArr = (ids) => {
     const promises = [];
     for (let i = 0; i < ids.length; i++) {
@@ -28,7 +25,7 @@ const RelatedItems = forwardRef((props, ref) => {
         method: 'get',
         url: `${process.env.API_URL}/products/${ids[i]}/styles`,
         headers: {
-          Authorization: process.env.AUTH_KEY, // TODO: Get rid of this when env is set up!!
+          Authorization: process.env.AUTH_KEY, 
         },
       };
       promises.push(axios(config));
@@ -46,7 +43,6 @@ const RelatedItems = forwardRef((props, ref) => {
           }
           return unformattedObj;
         });
-        // setRelatedProductStyles(() => unformattedObjArr);
         return unformattedObjArr;
       })
       .catch((err) => console.log('Error:', err));
@@ -60,14 +56,13 @@ const RelatedItems = forwardRef((props, ref) => {
         method: 'get',
         url: `${process.env.API_URL}/products/${ids[i]}`,
         headers: {
-          Authorization: process.env.AUTH_KEY, // TODO: Get rid of this when env is set up!!
+          Authorization: process.env.AUTH_KEY, 
         },
       };
       promises.push(axios(config));
     }
     return Promise.all(promises)
       .then((prodObjArr) => {
-        // setRelatedProduct_ids(() => prodObjArr.map((product) => product.data));
         return prodObjArr.map((product) => product.data);
       })
       .catch((err) => console.log('Error:', err));
@@ -84,47 +79,17 @@ const RelatedItems = forwardRef((props, ref) => {
           sort: 'relevant',
         },
         headers: {
-          Authorization: process.env.AUTH_KEY, // TODO: Get rid of this when env is set up!!
+          Authorization: process.env.AUTH_KEY,
         },
       };
       promises.push(axios(config));
     }
     return Promise.all(promises)
       .then((prodObjArr) => {
-        // setRelatedProductReviews(() =>
-        //   prodObjArr.map((product) => product.data),
-        // );
         return prodObjArr.map((product) => product.data);
       })
       .catch((err) => console.log('Error:', err));
   };
-
-  //  relying on the order may introduce a bug
-  // const cardFormatter = (reviews, ids, styles) => {
-  //   const formattedCards = [];
-  //   for (let i = 0; i < ids.length; i++) {
-  //     const reviewTotal = reviews[i].results.reduce(
-  //       (total, item) => total + item,
-  //       0,
-  //     );
-  //     const reviewAvg = reviewTotal / reviews[i].results.length;
-  //     const formattedCard = {
-  //       id: styles[i].product_id,
-  //       image: styles[i].results[0].photos[0].thumbnail_url,
-  //       category: ids[i].category,
-  //       name: ids[i].name,
-  //       price: styles[i].results[0].original_price,
-  //       discountedPrice: styles[i].results[0].sale_price,
-  //       rating: reviewAvg,
-  //       description: ids[i].description,
-  //       features: ids[i].features,
-  //     };
-  //     formattedCards.push(formattedCard);
-  //   }
-  //   setCardList(formattedCards);
-  //   return formattedCards;
-  // };
-  //  Feeder for dummy data to setup component.
   const setOverviewDataState = (id) => {
     const configId = {
       method: 'get',
@@ -172,7 +137,7 @@ const RelatedItems = forwardRef((props, ref) => {
       method: 'get',
       url: `${process.env.API_URL}/products/${currentProduct}/related`,
       headers: {
-        Authorization: process.env.AUTH_KEY, // TODO: Get rid of this when env is set up!!
+        Authorization: process.env.AUTH_KEY,
       },
     };
     axios(config)
